@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Hello there {{ user.firstname }} {{ user.lastname }}!</h1>
+    <h2>You're logged in as {{ user.username }}</h2>
+    <h3>Your e-mail address is {{ user.email }}</h3>
+    Username: <input type="text" v-model="user.username"><br>
+    First name: <input type="text" v-model="user.firstname"><br>
+    Last name: <input type="text" v-model="user.lastname"><br>
+    E-mail address: <input type="text" v-model="user.email">
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      user: {
+        username: '',
+        firstname: '',
+        lastname: '',
+        email: '',
+        password: ''
+      }
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
