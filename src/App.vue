@@ -8,7 +8,7 @@
     Last name: <input type="text" v-model="user.lastname"><br>
     E-mail address: <input type="text" v-model="user.email"><br>
     Myboolean is {{ myBoolean }}
-    <button style="background-color: red" v-on:click="myBoolean = !myBoolean">Show my info</button>
+    <button style="background-color: red" v-on:click="toggleBoolean">Show my info</button>
   </div>
 </template>
 
@@ -24,6 +24,11 @@ export default {
         password: ''
       },
       myBoolean: true
+    }
+  },
+  methods: {
+    toggleBoolean() {
+      this.myBoolean = !this.myBoolean
     }
   }
 }
