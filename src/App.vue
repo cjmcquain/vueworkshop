@@ -9,7 +9,7 @@
     E-mail address: <input type="text" v-model="user.email"><br>
     Myboolean is {{ myBoolean }}
     <button style="background-color: red" @click="toggleBoolean">Show my info</button>
-    <charlesComponent></charlesComponent>
+    <charlesComponent v-if="myBoolean"></charlesComponent>
  
   </div>
 </template>
