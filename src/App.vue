@@ -9,10 +9,14 @@
     E-mail address: <input type="text" v-model="user.email"><br>
     Myboolean is {{ myBoolean }}
     <button style="background-color: red" @click="toggleBoolean">Show my info</button>
+    <charlesComponent></charlesComponent>
+ 
   </div>
 </template>
 
 <script>
+import charlesComponent from './components/charlesComponent.vue';
+
 export default {
   data() {
     return {
@@ -30,6 +34,9 @@ export default {
     toggleBoolean() {
       this.myBoolean = !this.myBoolean
     }
+  },
+  components: {
+    charlesComponent
   }
 }
 </script>
